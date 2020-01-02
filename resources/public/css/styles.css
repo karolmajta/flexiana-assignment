@@ -1,0 +1,18 @@
+body {
+    margin: 50px auto;
+    max-width: 700px;
+    font-family: sans-serif;
+}
+
+label {
+    display: block;
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px
+}
