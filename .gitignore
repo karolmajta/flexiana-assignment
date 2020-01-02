@@ -2,6 +2,7 @@ pom.xml
 pom.xml.asc
 *.jar
 *.class
+*.log
 /lib/
 /classes/
 /target/
@@ -11,4 +12,6 @@ pom.xml.asc
 .lein-plugins/
 .lein-failures
 .nrepl-port
+.rebel_readline_history
 .cpcache/
+/resources/public/js/compiled/
