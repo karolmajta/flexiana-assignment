@@ -1,7 +1,13 @@
 (ns flexiana-assignment.core
-    (:require [flexiana-assignment.scramble :as scramble]))
+    (:require
+      [ring.middleware.params :refer [wrap-params]]
+      [compojure.core :refer [defroutes GET ANY]]
+      [flexiana-assignment.resources :refer [scramble?]]))
 
-(defn -main
-      "I can say 'Hello World'."
-      []
-      (println (scramble/scramble? "afegbcde" "efg")))
+(defroutes api-routes
+           (GET "/:source/:target" [source target] (scramble? source target))
+           (ANY "/*" [] ""))
+
+(def api-handler
+  (-> api-routes
+      wrap-params))
