@@ -19,6 +19,7 @@
                                   [org.clojure/core.async "0.6.532"]
                                   [cljs-http "0.1.46"]]}}
   :clean-targets [:target-path "out"]
+  :figwheel {:css-dirs ["resources/public/css"]}
   :cljsbuild {:builds
               [{:id "dev"
                 :source-paths ["src"]
